@@ -1,6 +1,6 @@
 {
-  "name": "jsbuild",
-  "version": "1.0.0",
+  "name": "jbl",
+  "version": "0.1.0",
   "description": "",
   "main": "./lib/main.js",
   "preferGlobal": true,
@@ -8,6 +8,7 @@
     "jsbuild": "./lib/cli.js"
   },
   "scripts": {
+    "publish": "npm publish",
     "build": "node ./scripts/build.js",
     "test": "node ./test/all.test.js"
   },

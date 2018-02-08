@@ -1,45 +1,127 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'publish' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
 2 info using npm@3.10.10
 3 info using node@v6.11.4
-4 verbose run-script [ 'prepublish', 'publish', 'postpublish' ]
-5 info lifecycle jbl@0.1.1~prepublish: jbl@0.1.1
-6 silly lifecycle jbl@0.1.1~prepublish: no script for prepublish, continuing
-7 info lifecycle jbl@0.1.1~publish: jbl@0.1.1
-8 verbose lifecycle jbl@0.1.1~publish: unsafe-perm in lifecycle true
-9 verbose lifecycle jbl@0.1.1~publish: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/jameym/github.com/jameymcelveen/jsbuild/node_modules/.bin:/Users/jameym/.fastlane/bin:/Users/jameym/wpilib/simulation/sim:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/dotnet:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/usr/local/bin:/Users/jameym/github.com/jameymcelveen/jsbuild/depot_tools:~/bin:/usr/local/go/bin:/Users/jameym/go-projects/bin:eval PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/dotnet:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/jameym/github.com/jameymcelveen/jsbuild/depot_tools:~/bin:/Users/jameym/go-projects/bin"; export PATH;
-10 verbose lifecycle jbl@0.1.1~publish: CWD: /Users/jameym/github.com/jameymcelveen/jsbuild
-11 silly lifecycle jbl@0.1.1~publish: Args: [ '-c', 'npm publish' ]
-12 silly lifecycle jbl@0.1.1~publish: Returned: code: 1  signal: null
-13 info lifecycle jbl@0.1.1~publish: Failed to exec publish script
-14 verbose stack Error: jbl@0.1.1 publish: `npm publish`
-14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:920:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
-15 verbose pkgid jbl@0.1.1
-16 verbose cwd /Users/jameym/github.com/jameymcelveen/jsbuild
-17 error Darwin 16.7.0
-18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "publish"
-19 error node v6.11.4
-20 error npm  v3.10.10
-21 error code ELIFECYCLE
-22 error jbl@0.1.1 publish: `npm publish`
-22 error Exit status 1
-23 error Failed at the jbl@0.1.1 publish script 'npm publish'.
-23 error Make sure you have the latest version of node.js and npm installed.
-23 error If you do, this is most likely a problem with the jbl package,
-23 error not with npm itself.
-23 error Tell the author that this fails on your system:
-23 error     npm publish
-23 error You can get information on how to open an issue for this project with:
-23 error     npm bugs jbl
-23 error Or if that isn't available, you can get their info via:
-23 error     npm owner ls jbl
-23 error There is likely additional logging output above.
-24 verbose exit [ 1, true ]
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/jameym/github.com/jameymcelveen/jsbuild',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/jameym/.npm/jbl/0.2.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/jameym/.npm correctMkdir not in flight; initializing
+10 info lifecycle jbl@0.2.0~prepublish: jbl@0.2.0
+11 silly lifecycle jbl@0.2.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/jameym/.npm/jbl/0.2.0/package.tgz',
+12 verbose tar pack   '/Users/jameym/github.com/jameymcelveen/jsbuild' ]
+13 verbose tarball /Users/jameym/.npm/jbl/0.2.0/package.tgz
+14 verbose folder /Users/jameym/github.com/jameymcelveen/jsbuild
+15 verbose addLocalTarball adding from inside cache /Users/jameym/.npm/jbl/0.2.0/package.tgz
+16 verbose correctMkdir /Users/jameym/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd jbl@0.2.0
+18 verbose afterAdd /Users/jameym/.npm/jbl/0.2.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/jameym/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/jameym/.npm/jbl/0.2.0/package/package.json written
+21 silly publish { name: 'jbl',
+21 silly publish   version: '0.2.0',
+21 silly publish   description: 'JSBuild ======= Build your JavaScript application with little or no configuration',
+21 silly publish   main: './lib/main.js',
+21 silly publish   preferGlobal: true,
+21 silly publish   bin: { jsbuild: './lib/cli.js' },
+21 silly publish   scripts:
+21 silly publish    { publish: 'npm publish',
+21 silly publish      build: 'node ./scripts/build.js',
+21 silly publish      test: 'node ./test/all.test.js' },
+21 silly publish   keywords: [],
+21 silly publish   author: { name: 'Jamey McElveen', email: 'jamey@mcelveen.us' },
+21 silly publish   license: 'MIT',
+21 silly publish   dependencies: { commander: '^2.13.0', glob: '^7.1.2' },
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-core': '^6.26.0',
+21 silly publish      'babel-loader': '^7.1.2',
+21 silly publish      'babel-preset-env': '^1.6.1' },
+21 silly publish   readme: 'JSBuild\n=======\nBuild your JavaScript application with little or no configuration\n\n## Installation\n1. Install [Node.js](https://nodejs.org)\n2. Install JSBuild\n    ```\n    $ npm -i -g jsbuild\n    ```\n\n## Usage\n1. Navigate to your projects root directory.\n2. From the command line execute:\n    ```\n    $ jsbuild\n    ```',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'bf1e56d61e9c5870628678ddcdaafad51f1e4e14',
+21 silly publish   _id: 'jbl@0.2.0',
+21 silly publish   _shasum: '02b2e9a1986ef6d97a31de21d21c9ca4d5a00ae7',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name jbl
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'jbl',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'jbl',
+26 silly mapToRegistry   name: 'jbl',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/jbl
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/jameym/.npm/jbl/0.2.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/jbl
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 2:51:14 PM
+33 verbose request using bearer token for auth
+34 verbose request id 573525408f8a95cc
+35 http request PUT https://registry.npmjs.org/jbl
+36 http 200 https://registry.npmjs.org/jbl
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'content-encoding': 'gzip',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'transfer-encoding': 'chunked',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Thu, 08 Feb 2018 19:51:18 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-iad2647-IAD',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1518119475.185198,VS0,VE3082',
+37 verbose headers   vary: 'Accept-Encoding, Accept' }
+38 verbose request invalidating /Users/jameym/.npm/registry.npmjs.org/jbl on PUT
+39 info lifecycle jbl@0.2.0~publish: jbl@0.2.0
+40 verbose lifecycle jbl@0.2.0~publish: unsafe-perm in lifecycle true
+41 verbose lifecycle jbl@0.2.0~publish: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/jameym/github.com/jameymcelveen/jsbuild/node_modules/.bin:/Users/jameym/.fastlane/bin:/Users/jameym/wpilib/simulation/sim:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/dotnet:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/usr/local/bin:/Users/jameym/github.com/jameymcelveen/jsbuild/depot_tools:~/bin:/usr/local/go/bin:/Users/jameym/go-projects/bin:eval PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/dotnet:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/jameym/github.com/jameymcelveen/jsbuild/depot_tools:~/bin:/Users/jameym/go-projects/bin"; export PATH;
+42 verbose lifecycle jbl@0.2.0~publish: CWD: .
+43 silly lifecycle jbl@0.2.0~publish: Args: [ '-c', 'npm publish' ]
+44 silly lifecycle jbl@0.2.0~publish: Returned: code: 1  signal: null
+45 info lifecycle jbl@0.2.0~publish: Failed to exec publish script
+46 verbose stack Error: jbl@0.2.0 publish: `npm publish`
+46 verbose stack Exit status 1
+46 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+46 verbose stack     at emitTwo (events.js:106:13)
+46 verbose stack     at EventEmitter.emit (events.js:191:7)
+46 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+46 verbose stack     at emitTwo (events.js:106:13)
+46 verbose stack     at ChildProcess.emit (events.js:191:7)
+46 verbose stack     at maybeClose (internal/child_process.js:920:16)
+46 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
+47 verbose pkgid jbl@0.2.0
+48 verbose cwd /Users/jameym/github.com/jameymcelveen/jsbuild
+49 error Darwin 16.7.0
+50 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+51 error node v6.11.4
+52 error npm  v3.10.10
+53 error code ELIFECYCLE
+54 error jbl@0.2.0 publish: `npm publish`
+54 error Exit status 1
+55 error Failed at the jbl@0.2.0 publish script 'npm publish'.
+55 error Make sure you have the latest version of node.js and npm installed.
+55 error If you do, this is most likely a problem with the jbl package,
+55 error not with npm itself.
+55 error Tell the author that this fails on your system:
+55 error     npm publish
+55 error You can get information on how to open an issue for this project with:
+55 error     npm bugs jbl
+55 error Or if that isn't available, you can get their info via:
+55 error     npm owner ls jbl
+55 error There is likely additional logging output above.
+56 verbose exit [ 1, true ]

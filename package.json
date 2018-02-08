@@ -1,0 +1,26 @@
+{
+  "name": "jsbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/main.js",
+  "preferGlobal": true,
+  "bin": {
+    "jsbuild": "./lib/cli.js"
+  },
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "test": "node ./test/all.test.js"
+  },
+  "keywords": [],
+  "author": "Jamey McElveen <jamey@mcelveen.us>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.13.0",
+    "glob": "^7.1.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1"
+  }
+}
